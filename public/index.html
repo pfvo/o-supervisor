@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <!-- <button class="btn">Test</button> -->
+        <button id="modal-btn">modal</button>
+    </nav>
+    <h1>My Projects</h1>
+    <div class="main-container">
+        <div class="container">
+            <div class="list" id="do">
+                <h1>Do</h1>
+            </div>
+            <div class="list" id="doing">
+                <h1>Doing</h1>
+            </div>
+            <div class="list" id="done">
+                <h1>Done</h1>
+            </div>
+        </div>
+    </div>
+    <div class="modal-container">
+        <div class="modal">
+            <div class="modal-header">
+                <span class="close-btn">&times;</span>
+                <h1>Add New Project</h1>
+            </div>
+            <div class="modal-content">
+                <label class='tittlelabel' for="tittle">Tittle</label>
+                <input type="Text" id="tittle" placeholder="Tittle">
+                <div class="importance-modal">
+                    <p>Importance</p>
+                    <input type="radio" id="low" name="importance" value="low" checked>
+                    <label for="low">Low</label><br>
+                    <input type="radio" id="medium" name="importance" value="medium">
+                    <label for="medium">Medium</label><br>
+                    <input type="radio" id="high" name="importance" value="high">
+                    <label for="high">High</label>
+                    <div class="deliver">
+                        <label for="ddate">Deliver by:</label>
+                        <input class="deliver-date" type="date" name="ddate">
+                    </div>             
+                </div>
+                <div class="modal-btns">
+                    <button class="modal-submit">Submit</button>
+                    <button class="modal-cancel">Cancel</button>
+                </div>
+            </div>
+        </div>  
+    </div>   
+
+    
+    <template id="template">
+        <div class="item-cont" draggable="true">
+            <p class="item"></p>
+            <p class="remove-project">Remove Project</p>
+        </div>
+       
+    </template>
+    
+</body>
+</html>

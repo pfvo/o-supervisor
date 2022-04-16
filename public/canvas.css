@@ -1,0 +1,152 @@
+html {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+body {
+    padding: 0;
+    margin: 0;
+    border: none;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    
+}
+.canvas-container {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    border: none;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: flex-end;
+}
+#myCanvas {
+    border: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(162, 155, 121);
+}
+
+.options {
+    position: absolute;
+    margin-bottom: 1.5%;
+    height: 100px;
+    width: 500px;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.549);
+    background-color: rgba(67, 67, 67, 0.234);
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.options-colors {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 30%;
+    margin-left: 5px;
+}
+.color {
+    border-radius: 100%;
+    height: 30px;
+    width: 30px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.549);
+}
+
+.color-custom {
+    background-color: rgb(255, 255, 255, 0);
+    border-radius: 100%;
+    border: none;
+    height: 30px;
+    width: 30px;
+    box-shadow: none;
+}
+
+label {
+    font-size: 1em;
+}
+
+.options-other {
+    
+    height: 100%;
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.eraser, .custom, .undo, .clear {
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.549);
+    width: 90%;
+    height: 30%;
+    border-radius: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slidecontainer {
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .slidecontainer > p {
+      margin-top: -5px;
+      width: 100%;
+  }
+  .slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    border-radius: 40px;
+    margin-top: -20px;
+  }
+  
+  .slider:hover {
+    opacity: 1;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #04AA6D;
+    cursor: pointer;
+    border-radius: 40px;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #04AA6D;
+    cursor: pointer;
+    border-radius: 40px;
+  }
+  
+  .upload {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+  }
+
+  .update {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
