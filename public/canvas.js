@@ -107,7 +107,7 @@ const undoLast = () => {
 
 
 const uploadCanvas = () => {
-    fetch('http://localhost:3001/projects/:projectid/tasks/:tasksid', {
+    fetch('/projects/:projectid/tasks/:tasksid', {
         method: 'post',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({

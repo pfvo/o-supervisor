@@ -54,7 +54,7 @@ const dragStart = (event) => {
       event.target.appendChild(document.querySelectorAll(`[taskid="${data}"]`)[0])
   
       console.log(event.target.id)
-      fetch('http://localhost:3001/projects/:projectid/tasks', {
+      fetch('/projects/:projectid/tasks', {
         method: 'put',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
@@ -68,7 +68,7 @@ const dragStart = (event) => {
   }
 
 const loadProjectName = () => {
-    fetch('http://localhost:3001/projects')
+    fetch('/projects')
     .then(data => data.json())
     .then(projects => projects.filter(projectArray => projectArray.id === Number(projectid)))
     .then(project => {
@@ -80,11 +80,11 @@ const loadProjectName = () => {
 
 const loadTasks = () => {
     clearTasks()
-    fetch("http://localhost:3001/projects/" + projectid + "/tasks")
+    fetch("/projects/" + projectid + "/tasks")
     .then(data => data.json())
     .then(tasks => {   
         if (!tasks.length) {
-            fetch('http://localhost:3001/projects')
+            fetch('/projects')
             .then(data => data.json())
             .then(projects => projects.filter(projectArray => projectArray.id === Number(projectid)))
             .then(project => loadProjectName(project))
@@ -101,7 +101,7 @@ const loadTasks = () => {
                 itemCont.setAttribute("taskid", task.id)
                 itemCont.classList.add(task.importance)
                 
-                fetch('http://localhost:3001/projects/' + projectid + '/tasks/' + task.id + '/attachments')
+                fetch('/projects/' + projectid + '/tasks/' + task.id + '/attachments')
                 .then(response => response.json())
                 .then(data => {
                     if(!data.length) {
@@ -140,7 +140,7 @@ const addTask = () => {
     const selectedImportance = document.querySelector('input[name="importance"]:checked').value;
     const selectedTittle = document.querySelector('#tittle').value.replaceAll(' ', "-");
     const selectedDeliver = document.querySelector('.deliver-date').value;
-    fetch('http://localhost:3001/projects/:projectid/tasks', {
+    fetch('/projects/:projectid/tasks', {
         method: 'post',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify ({

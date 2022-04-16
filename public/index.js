@@ -44,7 +44,7 @@ const dataDrop = (event) => {
     event.target.appendChild(document.querySelectorAll(`[projectid="${data}"]`)[0])
 
     console.log(event.target.id)
-    fetch('http://localhost:3001/projects', {
+    fetch('/projects', {
       method: 'put',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -59,7 +59,7 @@ const dataDrop = (event) => {
 
 const loadIndex = () => {
     clearTasks();
-    fetch('http://localhost:3001/projects')
+    fetch('/projects')
     .then(data => data.json())
     .then(projects => {
         projects.forEach(project => {
@@ -97,7 +97,7 @@ const addProject = () => {
   const selectedImportance = document.querySelector('input[name="importance"]:checked').value;
   const selectedTittle = document.querySelector('#tittle').value.replaceAll(' ', "-");
   const selectedDeliver = document.querySelector('.deliver-date').value;
-  fetch('http://localhost:3001/projects', {
+  fetch('/projects', {
     method: 'post',
     headers: {'Content-Type': 'application/json'},
     body: JSON.stringify({
