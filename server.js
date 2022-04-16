@@ -262,6 +262,6 @@ app.delete('/projects/:projectid/tasks/:tasksid/attachments/:attachmentid', (req
     .catch(e => res.json(e, "error updating attachment for canvas (serverside)"))
 })
 
-app.listen(3001, ()=> {
+app.listen(process.env.DATABASE_URL || 3001, ()=> {
     console.log('listening....')
 })
