@@ -82,6 +82,15 @@ const draw = (event) => {
     ctx.moveTo(event.clientX, event.clientY)
 }
 
+const draw2 = (event) => {
+    if(!drawing) return;
+    ctx.lineCap = 'round'
+    ctx.lineTo(event.touch[0].clientX, event.touch[0].clientY)
+    ctx.stroke()
+    ctx.beginPath()
+    ctx.moveTo(event.touch[0].clientX, event.touch[0].clientY)
+}
+
 const canvasClear = () => {
     ctx.fillStyle = myCanvas.style.backgroundColor;
     ctx.clearRect(0,0,myCanvas.width, myCanvas.height)
@@ -155,7 +164,7 @@ myCanvas.addEventListener('mouseout', drawEnd)
 
 window.addEventListener('touchstart', drawStart)
 window.addEventListener('touchend', drawEnd)
-window.addEventListener('touchmove', draw)
+window.addEventListener('touchmove', draw2)
 window.addEventListener('touchcancel', drawEnd)
 
 colors.forEach(color => color.addEventListener('click', changeColorClick))
