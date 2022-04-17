@@ -23,6 +23,7 @@ body {
     text-align: center;
     justify-content: center;
     align-items: flex-end;
+    overflow: hidden;
 }
 #myCanvas {
     border: none;
@@ -31,13 +32,14 @@ body {
     height: 100%;
     width: 100%;
     background-color: rgb(162, 155, 121);
+    overflow: hidden;
 }
 
 .options {
     position: absolute;
     margin-bottom: 1.5%;
     height: 100px;
-    width: 400px;
+    width: 500px;
     box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.549);
     background-color: rgba(67, 67, 67, 0.234);
     border-radius: 15px;
