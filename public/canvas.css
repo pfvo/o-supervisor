@@ -8,9 +8,10 @@ body {
     padding: 0;
     margin: 0;
     border: none;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     overflow: hidden;
+    position: fixed
     
 }
 .canvas-container {
