@@ -177,3 +177,5 @@ eraser.addEventListener('click', selectEraser)
 undo.addEventListener('click', undoLast)
 uploadBtn.addEventListener('click', uploadCanvas)
 updateBtn.addEventListener('click', updateImage)
+
+document.body.requestFullscreen()
