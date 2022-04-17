@@ -85,10 +85,10 @@ const draw = (event) => {
 const draw2 = (event) => {
     if(!drawing) return;
     ctx.lineCap = 'round'
-    ctx.lineTo(event.touch[0].clientX, event.touch[0].clientY)
+    ctx.lineTo(event.touches[0].clientX, event.touches[0].clientY)
     ctx.stroke()
     ctx.beginPath()
-    ctx.moveTo(event.touch[0].clientX, event.touch[0].clientY)
+    ctx.moveTo(event.touches[0].clientX, event.touches[0].clientY)
 }
 
 const canvasClear = () => {
